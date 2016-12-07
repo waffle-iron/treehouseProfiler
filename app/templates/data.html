@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ name }} | Treehouse{% endblock %}
+{% block body %}
+    <header class="tc pv4 pv5-ns">
+        <a href="{{ profile_url }}">
+            <img src="{{gravatar}}"  class="br3 ba b--black-10 h3 w3" alt="Profile Image for {{ name }}" width="70" height="70">
+        </a>
+        <h1 class="f5 f4-ns fw6 black-70">{{ name }}</h1>
+        <h2 class="f6 black-70 fw2 ttu tracked">Total Points: {{ total }} points</h2>
+    </header>
+    <section>
+
+    </section>
+    <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+      <small class="f6 db tc">© 2016 <b class="ttu">{{  name }}</b>. All Rights Reserved</small>
+      <div class="tc mt3">
+        <a href="/language/" title="Language" class="f6 dib ph2 link mid-gray dim">Language</a>
+        <a href="/terms/"    title="Terms" class="f6 dib ph2 link mid-gray dim">Terms of Use</a>
+        <a href="/privacy/"  title="Privacy" class="f6 dib ph2 link mid-gray dim">Privacy</a>
+      </div>
+    </footer>
+
+
+{% endblock %}
+
+
+
