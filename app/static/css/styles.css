@@ -1,0 +1,98 @@
+/* line 3, ../sass/styles.scss */
+body {
+  color: #2d3339;
+  font-family: "Varela Round";
+  text-align: center;
+  background: rgba(243, 250, 182, 0.2);
+  font-size: 16px;
+}
+
+/* line 11, ../sass/styles.scss */
+.intro {
+  color: #5fcf80;
+  font-size: 3em;
+}
+
+/* line 16, ../sass/styles.scss */
+a {
+  color: #3f8abf;
+  text-decoration: none;
+}
+
+/* line 19, ../sass/styles.scss */
+a:hover {
+  color: #65a1cc;
+}
+
+/* line 22, ../sass/styles.scss */
+form {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+/* line 27, ../sass/styles.scss */
+form .fa {
+  color: #5fcf80;
+}
+/* line 31, ../sass/styles.scss */
+form .link {
+  padding: 20px;
+  float: right;
+  border: 1px solid #ccc;
+  background: rgba(188, 197, 200, 0.2);
+  margin: 1%;
+  width: 30%;
+}
+/* line 39, ../sass/styles.scss */
+form .link:last-of-type {
+  margin-right: 60px;
+}
+/* line 44, ../sass/styles.scss */
+form .group {
+  padding-top: 80px;
+  margin-left: 20px;
+  width: 100%;
+}
+/* line 48, ../sass/styles.scss */
+form .group .form-item {
+  padding-top: 30px;
+}
+/* line 53, ../sass/styles.scss */
+form input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* line 65, ../sass/styles.scss */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* line 69, ../sass/styles.scss */
+input[type="checkbox"] {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  background: url(../img/unchecked.svg) left top no-repeat;
+  cursor: pointer;
+}
+
+/* line 79, ../sass/styles.scss */
+input[type="checkbox"]:checked {
+  background: url(../img/checked.svg) left top no-repeat;
+}
+
+@media screen and (max-width: 570px) {
+  /* line 85, ../sass/styles.scss */
+  div.link {
+    width: 97%;
+    float: none;
+  }
+}

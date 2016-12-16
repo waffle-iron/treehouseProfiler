@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="compile &quot;&quot; $UnixSeparators($FilePath$)$" />
+      <option name="arguments" value="compile /home/gary/Documents/flask_projects/treehouseProfiler $UnixSeparators($FilePath$)$" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" value="Compiles .scss files into .css files using compass" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="scss" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Compass SCSS" />
-      <option name="output" value="$PROJECT_DIR$/app/static" />
+      <option name="output" value="$PROJECT_DIR$/app/static/ $FileNameWithoutExtension$.css" />
       <option name="outputFilters">
         <array />
       </option>
@@ -17,7 +17,7 @@
       <option name="program" value="/usr/local/bin/compass" />
       <option name="scopeName" value="Project Files" />
       <option name="trackOnlyRoot" value="true" />
-      <option name="workingDir" value="$PROJECT_DIR$" />
+      <option name="workingDir" value="$PROJECT_DIR$/" />
       <envs />
     </TaskOptions>
   </component>

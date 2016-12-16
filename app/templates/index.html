@@ -1,36 +1,71 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
+{% block title %}Cvhub | Home{% endblock %}
 {% block body %}
-    <br><br>
-    <div class="container-fluid">
-        <h3>Welcome to Treehouse Profiler</h3>
+    <h3 class="intro">Welcome to CvHub <i class="fa fa-paperclip" aria-hidden="true"></i></h3>
+    <p>Please select Profiles to include</p>
+    <div class="main" ng-controller="mainCtrl">
+        <form action="/data" autocomplete="on" name="infoForm" method="POST"  novalidate>
+    {#        <div class="form-group">#}
+    {#            <label class="sr-only" for="search">Enter your Treehouse Username</label>#}
+    {#            <input id="search"  class="form-control .col-md-4"  name="search" type="text" placeholder="Treehouse username">#}
+    {#            <button type="submit" value="send" id="search_submit" class="btn btn-success">Submit</button>#}
+    {#        </div>#}
+            <div class="link" ng-class="{ 'has-error' : infoForm.linkedin.$invalid && !infoForm.linkedin.$pristine }">
+                <label for="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</label>
+                <input type="checkbox" name="linkedin" id="linkedin" ng-model="linkedin"><br>
+            </div>
+            <div class="link">
+                <label for="github"><i class="fa fa-github" aria-hidden="true"></i> Github</label>
+                <input type="checkbox" id="github" ng-model="github"><br>
+            </div>
+            <div class="link">
+                <label for="treehouse"><i class="fa fa-user-circle" aria-hidden="true"></i> Treehouse</label>
+                <input type="checkbox" id="treehouse" ng-model="treehouse">
+            </div>
+
+            <div class="group">
+                <div class="form-item" ng-show="linkedin">
+                    <label for="linkedin_username"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin Username</label><br>
+                    <input type="text" id="linkedin_username" required/>
+                </div>
+
+                <div class="form-item" ng-show="github">
+                    <label for="github_username"><i class="fa fa-github" aria-hidden="true"></i> Github Username</label><br>
+                    <input type="text" id="github_username" required/>
+                </div>
+
+                <div class="form-item" ng-show="treehouse">
+                    <label for="treehouse_username"><i class="fa fa-user-circle" aria-hidden="true"></i> Treehouse Username</label><br>
+                    <input type="text" id="treehouse_username" required/>
+                </div>
+            </div>
+
+        <p>We need a little information about yourself</p>
+
+        <div ng-class="{ 'has-error' : infoForm.name.$invalid && !infoForm.name.$pristine }">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" ng-model="user.name" required>
+            <p ng-show="infoForm.name.$invalid && !infoForm.name.$pristine"
+               class="help-block">You name is required.</p>
+        </div>
+    </form>
     </div>
 
-    <div class="jumbotron">
-      <div class="container">
-        <p>Input your Team treehouse username and we will create you a html version as CV.</p>
-        <form class="form-inline" action="/data" autocomplete="on" method="POST">
-            <div class="form-group">
-                <label class="sr-only" for="search">Enter your Treehouse Username</label>
-                <input id="search"  class="form-control .col-md-4"  name="search" type="text" placeholder="Treehouse username">
-                <button type="submit" value="send" id="search_submit" class="btn btn-success">Submit</button>
-            </div>
-        </form>
+
+
+    <form name="userForm" novalidate>
+
+        <!-- NAME -->
+
+    </form>
+    <br><br>
+    <footer class="pv4 ph3 ph5-ns tc">
+      <div class="mt4">
+        <a href="#" class="f6 link dim gray dib mr3 mr4-ns">Help</a>
+        <a href="#" class="f6 link dim gray dib mr3 mr4-ns">Send feedback</a>
+        <a href="#" class="f6 link dim gray dib mr3 mr4-ns">Privacy</a>
+        <a href="#" class="f6 link dim gray dib">Terms</a>
       </div>
-    </div>
-<footer class="pv4 ph3 ph5-ns tc">
-  <a class="link dim gray dib br-100 h2 w2 mr3 " href="#" title="">
-    <svg data-icon="github" viewBox="0 0 32 32" style="fill:currentcolor">
-      <title>github icon</title>
-      <path d="M0 18 C0 12 3 10 3 9 C2.5 7 2.5 4 3 3 C6 3 9 5 10 6 C12 5 14 5 16 5 C18 5 20 5 22 6 C23 5 26 3 29 3 C29.5 4 29.5 7 29 9 C29 10 32 12 32 18 C32 25 30 30 16 30 C2 30 0 25 0 18 M3 20 C3 24 4 28 16 28 C28 28 29 24 29 20 C29 16 28 14 16 14 C4 14 3 16 3 20 M8 21 A1.5 2.5 0 0 0 13 21 A1.5 2.5 0 0 0 8 21 M24 21 A1.5 2.5 0 0 0 19 21 A1.5 2.5 0 0 0 24 21 z"></path>
-    </svg>
-  </a>
-  <div class="mt4">
-    <a href="#" class="f6 link dim gray dib mr3 mr4-ns">Help</a>
-    <a href="#" class="f6 link dim gray dib mr3 mr4-ns">Send feedback</a>
-    <a href="#" class="f6 link dim gray dib mr3 mr4-ns">Privacy</a>
-    <a href="#" class="f6 link dim gray dib">Terms</a>
-  </div>
-</footer>
+    </footer>
 
 {% endblock %}

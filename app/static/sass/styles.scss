@@ -1,0 +1,91 @@
+@import "compass";
+
+body {
+  color: #2d3339;
+  font-family: "Varela Round";
+  text-align: center;
+  background: rgba(243, 250, 182, 0.2);
+  font-size: 16px;
+}
+
+.intro {
+  color: #5fcf80;
+  font-size: 3em;
+}
+
+a {
+  color: #3f8abf;
+  text-decoration: none; }
+  a:hover {
+    color: #65a1cc; }
+
+form {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+
+  .fa {
+    color: #5fcf80;
+  }
+
+  .link{
+    padding: 20px;
+    float: right;
+    border: 1px solid #ccc;
+    background: rgba(188, 197, 200, 0.2);
+    margin: 1%;
+    width: 30%;
+
+    &:last-of-type{
+      margin-right: 60px;
+    }
+  }
+
+  .group {
+    padding-top: 80px;
+    margin-left: 20px;
+    width: 100%;
+    .form-item {
+      padding-top: 30px;
+    }
+  }
+
+  input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"]{
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../img/unchecked.svg) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked{
+    background:url(../img/checked.svg) left top no-repeat;
+}
+
+@media screen and (max-width: 570px) {
+
+    div.link {
+      width: 97%;
+      float: none;
+
+    }
+}
+
