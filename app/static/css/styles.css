@@ -9,42 +9,51 @@ body {
 
 /* line 11, ../sass/styles.scss */
 .intro {
+  padding-top: 40px;
   color: #5fcf80;
   font-size: 3em;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
 }
 
-/* line 16, ../sass/styles.scss */
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+/* line 31, ../sass/styles.scss */
 a {
   color: #3f8abf;
   text-decoration: none;
 }
 
-/* line 19, ../sass/styles.scss */
+/* line 34, ../sass/styles.scss */
 a:hover {
   color: #65a1cc;
 }
 
-/* line 22, ../sass/styles.scss */
+/* line 37, ../sass/styles.scss */
 form {
   max-width: 97%;
   display: block;
   border-radius: 5px;
 }
-/* line 27, ../sass/styles.scss */
-form .fa {
-  color: #5fcf80;
-}
-/* line 31, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 form .text {
   padding-bottom: 30px;
   padding-top: 20px;
   padding-left: 20px;
 }
-/* line 37, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 form label {
   opacity: 0.80;
 }
-/* line 41, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 form .link {
   padding: 20px;
   float: right;
@@ -53,45 +62,74 @@ form .link {
   margin: 1%;
   width: 30%;
 }
-/* line 49, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 form .link:last-of-type {
   margin-right: 60px;
 }
-/* line 55, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
+form .fields div {
+  margin-top: 30px;
+}
+/* line 70, ../sass/styles.scss */
 form .group {
   padding-top: 80px;
   margin-left: 20px;
   width: 100%;
 }
-/* line 59, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 form .group .form-item {
   padding-top: 30px;
 }
-/* line 64, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 form .fields {
   margin-right: 60px;
 }
-/* line 68, ../sass/styles.scss */
+/* line 83, ../sass/styles.scss */
+form label {
+  margin-right: 30px;
+}
+/* line 87, ../sass/styles.scss */
+form textarea {
+  vertical-align: middle;
+  padding-left: 30px;
+}
+/* line 92, ../sass/styles.scss */
 form input, form textarea {
   width: 50%;
-  padding: 12px 10px;
+  padding: 12px 20px;
   margin: 10px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
-/* line 78, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 form input[type="email"] {
   margin-left: 50px;
 }
+/* line 106, ../sass/styles.scss */
+form input[type="submit"] {
+  background: #5fcf80;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-animation: hue 60s infinite linear;
+  color: white;
+  margin-left: 126px;
+  -moz-transition: opacity 400ms ease-in-out;
+  -o-transition: opacity 400ms ease-in-out;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition-delay: 200ms;
+}
+/* line 118, ../sass/styles.scss */
+form input[type="submit"]:hover {
+  opacity: 0.7;
+}
 
-/* line 84, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 input[type="checkbox"] {
   display: none;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 129, ../sass/styles.scss */
 input[type="checkbox"] {
   display: inline-block;
   width: 19px;
@@ -102,31 +140,78 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* line 98, ../sass/styles.scss */
+/* line 139, ../sass/styles.scss */
 input[type="checkbox"]:checked {
   background: url(../img/checked.svg) left top no-repeat;
 }
 
-@media screen and (max-width: 570px) {
-  /* line 103, ../sass/styles.scss */
+@media screen and (max-width: 701px) {
+  /* line 144, ../sass/styles.scss */
   div.link {
-    width: 97%;
+    width: 95%;
     float: none;
+    margin-left: 3%;
+  }
+
+  /* line 150, ../sass/styles.scss */
+  .group {
+    margin-top: -30px;
+  }
+
+  /* line 154, ../sass/styles.scss */
+  .form-item {
+    margin-bottom: 20px;
+  }
+
+  /* line 158, ../sass/styles.scss */
+  .text {
+    margin-top: -40px;
+  }
+
+  /* line 161, ../sass/styles.scss */
+  input {
+    width: 95%;
+    float: none;
+    white-space: nowrap;
   }
 }
-/* line 109, ../sass/styles.scss */
-fieldset {
-  border: none;
+@media screen and (max-width: 342px) {
+  /* line 169, ../sass/styles.scss */
+  form {
+    margin: 0;
+  }
+  /* line 172, ../sass/styles.scss */
+  form .date {
+    margin-left: 20%;
+  }
+  /* line 176, ../sass/styles.scss */
+  form input {
+    width: 100%;
+  }
+}
+/* line 182, ../sass/styles.scss */
+footer {
+  margin-left: 40px;
 }
 
-/* line 113, ../sass/styles.scss */
-textarea {
-  vertical-align: top;
-  margin-left: 80px;
-}
-
-/* line 118, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 #google_translate_element {
   margin-right: 30px;
   margin-bottom: 40px;
+  margin-left: 30px;
+}
+
+/* line 193, ../sass/styles.scss */
+hr.style-five {
+  border: 0;
+  height: 0;
+  /* Firefox... */
+  box-shadow: 0 0 70px 1px black;
+}
+
+/* line 198, ../sass/styles.scss */
+hr.style-five:after {
+  /* Not really supposed to work, but does */
+  content: "\00a0";
+  /* Prevent margin collapse */
 }
