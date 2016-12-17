@@ -20,12 +20,22 @@ a {
     color: #65a1cc; }
 
 form {
-  max-width: 100%;
+  max-width: 97%;
   display: block;
   border-radius: 5px;
 
   .fa {
     color: #5fcf80;
+  }
+
+  .text {
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  label {
+    opacity: 0.80;
   }
 
   .link{
@@ -41,6 +51,7 @@ form {
     }
   }
 
+
   .group {
     padding-top: 80px;
     margin-left: 20px;
@@ -50,15 +61,23 @@ form {
     }
   }
 
-  input[type=text] {
+  .fields {
+    margin-right: 60px;
+  }
+
+  input, textarea{
     width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 12px 10px;
+    margin: 10px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+  input[type="email"] {
+    margin-left: 50px;
+  }
 
 }
 
@@ -81,11 +100,22 @@ input[type="checkbox"]:checked{
 }
 
 @media screen and (max-width: 570px) {
-
     div.link {
       width: 97%;
       float: none;
-
     }
 }
 
+fieldset {
+ border: none;
+}
+
+textarea {
+  vertical-align: top;
+  margin-left: 80px;
+}
+
+#google_translate_element {
+ margin-right: 30px;
+  margin-bottom: 40px;
+}

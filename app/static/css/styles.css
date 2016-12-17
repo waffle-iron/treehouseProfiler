@@ -26,7 +26,7 @@ a:hover {
 
 /* line 22, ../sass/styles.scss */
 form {
-  max-width: 100%;
+  max-width: 97%;
   display: block;
   border-radius: 5px;
 }
@@ -35,6 +35,16 @@ form .fa {
   color: #5fcf80;
 }
 /* line 31, ../sass/styles.scss */
+form .text {
+  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+/* line 37, ../sass/styles.scss */
+form label {
+  opacity: 0.80;
+}
+/* line 41, ../sass/styles.scss */
 form .link {
   padding: 20px;
   float: right;
@@ -43,37 +53,45 @@ form .link {
   margin: 1%;
   width: 30%;
 }
-/* line 39, ../sass/styles.scss */
+/* line 49, ../sass/styles.scss */
 form .link:last-of-type {
   margin-right: 60px;
 }
-/* line 44, ../sass/styles.scss */
+/* line 55, ../sass/styles.scss */
 form .group {
   padding-top: 80px;
   margin-left: 20px;
   width: 100%;
 }
-/* line 48, ../sass/styles.scss */
+/* line 59, ../sass/styles.scss */
 form .group .form-item {
   padding-top: 30px;
 }
-/* line 53, ../sass/styles.scss */
-form input[type=text] {
+/* line 64, ../sass/styles.scss */
+form .fields {
+  margin-right: 60px;
+}
+/* line 68, ../sass/styles.scss */
+form input, form textarea {
   width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 12px 10px;
+  margin: 10px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
+/* line 78, ../sass/styles.scss */
+form input[type="email"] {
+  margin-left: 50px;
+}
 
-/* line 65, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
 input[type="checkbox"] {
   display: none;
 }
 
-/* line 69, ../sass/styles.scss */
+/* line 88, ../sass/styles.scss */
 input[type="checkbox"] {
   display: inline-block;
   width: 19px;
@@ -84,15 +102,31 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* line 79, ../sass/styles.scss */
+/* line 98, ../sass/styles.scss */
 input[type="checkbox"]:checked {
   background: url(../img/checked.svg) left top no-repeat;
 }
 
 @media screen and (max-width: 570px) {
-  /* line 85, ../sass/styles.scss */
+  /* line 103, ../sass/styles.scss */
   div.link {
     width: 97%;
     float: none;
   }
+}
+/* line 109, ../sass/styles.scss */
+fieldset {
+  border: none;
+}
+
+/* line 113, ../sass/styles.scss */
+textarea {
+  vertical-align: top;
+  margin-left: 80px;
+}
+
+/* line 118, ../sass/styles.scss */
+#google_translate_element {
+  margin-right: 30px;
+  margin-bottom: 40px;
 }

@@ -10,9 +10,9 @@
     {#            <input id="search"  class="form-control .col-md-4"  name="search" type="text" placeholder="Treehouse username">#}
     {#            <button type="submit" value="send" id="search_submit" class="btn btn-success">Submit</button>#}
     {#        </div>#}
-            <div class="link" ng-class="{ 'has-error' : infoForm.linkedin.$invalid && !infoForm.linkedin.$pristine }">
-                <label for="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</label>
-                <input type="checkbox" name="linkedin" id="linkedin" ng-model="linkedin"><br>
+            <div class="link">
+                <label for="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i> Dribble</label>
+                <input type="checkbox" name="dribble" id="dribble" ng-model="dribble"><br>
             </div>
             <div class="link">
                 <label for="github"><i class="fa fa-github" aria-hidden="true"></i> Github</label>
@@ -24,9 +24,9 @@
             </div>
 
             <div class="group">
-                <div class="form-item" ng-show="linkedin">
-                    <label for="linkedin_username"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin Username</label><br>
-                    <input type="text" id="linkedin_username" required/>
+                <div class="form-item" ng-show="dribble">
+                    <label for="dribble_username"><i class="fa fa-dribbble" aria-hidden="true"></i> Dribble Username</label><br>
+                    <input type="text" id="dribble_username" required/>
                 </div>
 
                 <div class="form-item" ng-show="github">
@@ -40,24 +40,23 @@
                 </div>
             </div>
 
-        <p>We need a little information about yourself</p>
-
-        <div ng-class="{ 'has-error' : infoForm.name.$invalid && !infoForm.name.$pristine }">
-            <label>Name</label>
-            <input type="text" name="name" class="form-control" ng-model="user.name" required>
-            <p ng-show="infoForm.name.$invalid && !infoForm.name.$pristine"
-               class="help-block">You name is required.</p>
-        </div>
+            <p class="text">We need a little information about yourself</p>
+            <div class="fields">
+                <div class="date">
+                    <label for="Date_of_birth">Date of Birth: </label>
+                    <input type="date" id="Date_of_birth" name="Date_of_birth" required placeholder=" " />
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" required placeholder=" " />
+                </div>
+                <div>
+                    <label for="description">Description: </label>
+                    <textarea name="description" id="description"></textarea>
+                </div>
+            </div>
     </form>
-    </div>
 
-
-
-    <form name="userForm" novalidate>
-
-        <!-- NAME -->
-
-    </form>
     <br><br>
     <footer class="pv4 ph3 ph5-ns tc">
       <div class="mt4">
@@ -67,5 +66,4 @@
         <a href="#" class="f6 link dim gray dib">Terms</a>
       </div>
     </footer>
-
 {% endblock %}
