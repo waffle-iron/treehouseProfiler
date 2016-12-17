@@ -1,2 +1,3 @@
-# treehouseProfiler
-Enter your teamtreehouse url and get a report page created for you
+CvHub
+
+Enter personal details and usernames for github, dribble or team treehouse and get an online report card created for you. 
