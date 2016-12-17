@@ -2,11 +2,12 @@
 <html lang="en" >
   <head>
     <title>{% block title %}{% endblock %}</title>
-{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.5/css/tachyons.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../static/css/styles.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -28,6 +29,11 @@
 
   </head>
   <body ng-app = "myApp">
+      <hr class="style-five">
+      <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+       <![endif]-->
       {% block body %}
           <!--code here in other files-->
       {% endblock %}
@@ -41,6 +47,7 @@
     }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <hr class="style-five">
 
   </body>
 </html>

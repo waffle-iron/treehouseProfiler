@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block title %}Cvhub | Home{% endblock %}
 {% block body %}
-    <h3 class="intro">Welcome to CvHub <i class="fa fa-paperclip" aria-hidden="true"></i></h3>
+    <h3 class="intro animated fadeInLeft">Welcome to CvHub</h3>
     <p>Please select Profiles to include</p>
     <div class="main" ng-controller="mainCtrl">
         <form action="/data" autocomplete="on" name="infoForm" method="POST"  novalidate>
-    {#        <div class="form-group">#}
+
     {#            <label class="sr-only" for="search">Enter your Treehouse Username</label>#}
     {#            <input id="search"  class="form-control .col-md-4"  name="search" type="text" placeholder="Treehouse username">#}
     {#            <button type="submit" value="send" id="search_submit" class="btn btn-success">Submit</button>#}
-    {#        </div>#}
+
             <div class="link">
                 <label for="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i> Dribble</label>
                 <input type="checkbox" name="dribble" id="dribble" ng-model="dribble"><br>
@@ -51,13 +51,15 @@
                     <input type="email" id="email" name="email" required placeholder=" " />
                 </div>
                 <div>
-                    <label for="description">Description: </label>
+                    <label for="description" id="description">Description: </label>
                     <textarea name="description" id="description"></textarea>
                 </div>
+                <input type="submit" value="Submit">
             </div>
     </form>
 
-    <br><br>
+    <br>
+    <br>
     <footer class="pv4 ph3 ph5-ns tc">
       <div class="mt4">
         <a href="#" class="f6 link dim gray dib mr3 mr4-ns">Help</a>
